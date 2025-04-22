@@ -595,6 +595,19 @@ src="https://www.facebook.com/tr?id=2292396414295914&ev=PageView&noscript=1"
   transform: translateY(0);
 }
 
+
+	  .botao-pulsante {
+    animation: pulse 1.5s infinite;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+
+
+	
   @media (max-width: 600px) {
     .titulo-bloco {
       font-size: 1.5em;
@@ -778,17 +791,17 @@ src="https://www.facebook.com/tr?id=2292396414295914&ev=PageView&noscript=1"
   </ul>
 	
 <p style="margin: 20px 0; font-size: 1.2em;">
-  <span style="color: #ff5555; text-decoration: line-through;">De R$ 1.000,00</span> 
+  De R$ <span style="color: #ff5555; text-decoration: line-through;">1.000,00</span> 
   <strong>por <span style="color: #00ff99;">R$ 197</span></strong> <br>
-  <span style="font-size: 0.9em; color: #ccc;">*Por tempo limitado*</span>
+  <span style="font-size: 0.7em; color: #ccc;">*Por tempo limitado*</span>
 </p>
 
 	
-  <div class="bloco-central">
-    <a href="https://sun.eduzz.com/G92EDAQKWE?cupom=vip" target="_blank">
-      <button class="botao">🔓 Quero acessar a mentoria</button>
-    </a>
-  </div>
+ <div class="bloco-central">
+  <a href="https://sun.eduzz.com/G92EDAQKWE?cupom=vip" target="_blank">
+    <button class="botao botao-pulsante">🔓 Quero acessar a mentoria</button>
+  </a>
+</div>
 
 	<script>
   fbq('track', 'CompleteRegistration');
