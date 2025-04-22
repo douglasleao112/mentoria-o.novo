@@ -702,9 +702,6 @@ src="https://www.facebook.com/tr?id=2292396414295914&ev=PageView&noscript=1"
   <div class="bloco-central">
     <button class="botao" onclick="proximo(3)">Quero entender isso</button>
   </div>
-	<script>
-  fbq('track', 'Lead');
-</script>
 </section>
 
 <!-- BLOCO 3 – POR QUE FUNCIONA -->
@@ -803,9 +800,6 @@ src="https://www.facebook.com/tr?id=2292396414295914&ev=PageView&noscript=1"
   </a>
 </div>
 
-	<script>
-  fbq('track', 'CompleteRegistration');
-</script>
 
 	
 </section>
@@ -874,8 +868,18 @@ src="https://www.facebook.com/tr?id=2292396414295914&ev=PageView&noscript=1"
     if (proximo) proximo.classList.add("ativo");
     blocoAtual = id;
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+	  // Aqui você insere os eventos do Pixel
+	  if (id === 1) {
+	    fbq('track', 'Lead'); // Evento Lead no BLOCO 1
+	  }
+	  if (id === 7) {
+   	 fbq('track', 'CompleteRegistration'); // Evento CompleteRegistration no BLOCO 7
+  	}
   }
 
+
+	
   function atualizarSaldo(valor) {
     saldo += valor;
     document.getElementById("saldoValor").innerText = saldo.toFixed(2).replace(".", ",");
