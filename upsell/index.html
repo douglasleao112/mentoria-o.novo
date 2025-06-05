@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentoria Exclusiva</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    .top-bar {
+      background: linear-gradient(to right, #ff0000, #cc0000);
+      text-align: center;
+      padding: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .sub-text {
+      font-size: 11px;
+      color: #fff;
+      margin-top: 4px;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 20px 15px;
+    }
+
+    h1 {
+      font-size: 20px;
+      text-align: center;
+      margin: 20px 0 10px;
+    }
+
+    h1 span {
+      color: #ff3333;
+    }
+
+    .desc {
+      text-align: center;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .benefits {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .benefits li {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .benefits li::before {
+      content: "✅ ";
+      color: #00ff00;
+    }
+
+    .price {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .price del {
+      color: #ff4444;
+      font-size: 16px;
+    }
+
+    .price strong {
+      display: block;
+      font-size: 28px;
+      color: #00ff00;
+    }
+
+    .cta-button {
+      display: block;
+      background: #28d948;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 10px;
+      margin: 20px 0 10px;
+    }
+
+    .downsell {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .downsell a {
+      color: #ccc;
+      text-decoration: underline;
+      font-size: 13px;
+    }
+
+    .image {
+      width: 100%;
+      margin-top: 30px;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 481px) {
+      h1 {
+        font-size: 26px;
+      }
+      .desc {
+        font-size: 17px;
+      }
+      .benefits li {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    Essa oferta encerra em <span id="timer">15:00</span>
+    <div class="sub-text">SUA COMPRA JÁ ESTÁ PRATICAMENTE CONCLUÍDA, MAS ANTES QUERO TE OFERECER UMA OPORTUNIDADE ÚNICA:</div>
+  </div>
+
+  <div class="container">
+    <h1>AGORA VOCÊ PODE RECEBER UM <span>ACOMPANHAMENTO PERSONALIZADO</span></h1>
+    <p class="desc">Semanalmente, você terá uma <strong>call individual por 2h</strong>, para tirar todas suas dúvidas diretamente comigo, durante um mês. Eu vou pegar na sua mão e te ajudar a melhorar ainda mais seus resultados.</p>
+
+    <ul class="benefits">
+      <li>Encontros semanais por 1 mês</li>
+      <li>Acesso ao meu WhatsApp 24h</li>
+      <li>Grupo de Networking no WhatsApp</li>
+      <li>Acesso a estratégias atuais validadas</li>
+    </ul>
+
+    <div class="price">
+      <del>De R$ 3.000,00</del>
+      <strong>Por R$ 197</strong>
+    </div>
+
+    <a href="https://sun.eduzz.com/Q9N57Z5K01" class="cta-button">QUERO APROVEITAR ESSA MENTORIA</a>
+
+    <div class="downsell">
+      <a href="downsell">"Quero perder essa oportunidade"</a>
+    </div>
+
+    <div class="image">
+      <img src="https://static.wixstatic.com/media/7f5efc_7c0cdb8844864657b48354a951c9beab~mv2.png/v1/crop/x_0,y_0,w_4126,h_4820/fill/w_713,h_833,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/doug.png" alt="Mentor" />
+    </div>
+  </div>
+
+  <script>
+    // Cronômetro regressivo de 15 minutos
+    let tempo = 15 * 60;
+    const timerEl = document.getElementById("timer");
+
+    const intervalo = setInterval(() => {
+      const minutos = Math.floor(tempo / 60);
+      const segundos = tempo % 60;
+      timerEl.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+      tempo--;
+
+      if (tempo < 0) {
+        clearInterval(intervalo);
+        timerEl.textContent = "00:00";
+      }
+    }, 1000);
+  </script>
+</body>
+</html>
