@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Última Oportunidade</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      text-align: center;
+    }
+
+    .progress-bar {
+      height: 16px;
+      background: #222;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .progress-bar::after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 90%;
+      background: linear-gradient(to right, red, #ff4d4d);
+      animation: load 2s ease-in-out forwards;
+    }
+
+    @keyframes load {
+      from { width: 0; }
+      to { width: 90%; }
+    }
+
+    h1 {
+      font-size: 22px;
+      margin: 20px 0 10px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+
+    h1 span {
+      color: #00ff66;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .price {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .price del {
+      color: red;
+      font-size: 18px;
+    }
+
+    .price strong {
+      color: #00ff00;
+      font-size: 28px;
+      display: block;
+    }
+
+    .note {
+      font-size: 12px;
+      margin-top: 5px;
+      color: #bbb;
+    }
+
+    .cta-button {
+      display: block;
+      margin: 30px auto 20px;
+      background: linear-gradient(to right, #8aff61, #2ecc71);
+      color: #fff;
+      font-weight: bold;
+      padding: 16px;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      max-width: 360px;
+    }
+
+    .mentor-img {
+      width: 100%;
+      max-width: 420px;
+      margin: 20px auto 0;
+    }
+
+    .mentor-img img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 481px) {
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="progress-bar"></div>
+
+  <div class="container">
+    <h1>SUA <span>ÚLTIMA</span> OPORTUNIDADE<br>PARA FAZER PARTE DA MENTORIA!</h1>
+
+    <p>Para você não ficar de fora, vou liberar um último <strong style="color:#00ff66">desconto de R$ 100,00</strong> exclusivo pra você, somente agora!<br>Você terá acesso à Mentoria Individual por apenas:</p>
+
+    <div class="price">
+      <del>De R$ 1.000,00</del>
+      <strong>Por R$ 97</strong>
+    </div>
+
+    <p class="note">*Essa oferta não aparecerá novamente!</p>
+
+    <a class="cta-button" href="https://chk.eduzz.com/5x6jvdqr">QUERO APROVEITAR</a>
+
+    <div class="mentor-img">
+      <img src="https://static.wixstatic.com/media/7f5efc_7c0cdb8844864657b48354a951c9beab~mv2.png/v1/crop/x_0,y_0,w_4126,h_4820/fill/w_713,h_833,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/doug.png" alt="Mentor">
+    </div>
+  </div>
+</body>
+</html>
