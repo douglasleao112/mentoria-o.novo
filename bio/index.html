@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Douglas Leão | Links</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    .no-right-click {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .header {
+      position: relative;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+.header img.top-img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -60px; /* Subiu ainda mais */
+}
+    .dollar1, .dollar2 {
+      position: absolute;
+      animation: float 5s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    .dollar1 { top: 20%; left: 10%; width: 80px; }
+    .dollar2 { top: 30%; right: 10%; width: 80px; animation-delay: 2s; }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-20px); }
+    }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: -100px; /* Faz os botões subirem sobre a imagem */
+  padding: 0 15px 40px;
+  position: relative;
+  z-index: 3;
+}
+
+    .btn {
+      display: inline-block;
+      padding: 16px 20px;
+      width: 90%;
+      max-width: 350px;
+      text-align: center;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: white;
+      background: linear-gradient(90deg, #FF3C00, #FF0000);
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      animation: pulse 1.2s infinite;
+      transition: transform 0.2s;
+    }
+
+    .btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+      animation: shine 2s infinite;
+    }
+
+    @keyframes shine {
+      0% { left: -100%; }
+      50% { left: 100%; }
+      100% { left: 100%; }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+  </style>
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+</head>
+
+<body class="no-right-click">
+
+  <div class="header">
+    <img class="top-img" src="https://static.wixstatic.com/media/7f5efc_95de6212433148a790030928844e1cb2~mv2.png" alt="Douglas Leão">
+    <img src="https://static.wixstatic.com/media/7f5efc_0f1c3523a207491a9610d6fcd356001b~mv2.png" class="dollar1" alt="Notas">
+    <img src="https://static.wixstatic.com/media/7f5efc_a334d1b8ae69448aa2477c25b4dd2b48~mv2.png" class="dollar2" alt="Notas">
+  </div>
+
+  <div class="buttons">
+    <a class="btn" href="https://mentoria-onovo.netlify.app/oferta/">Personal, aumente seu faturamento!</a>
+    <a class="btn" href="https://www.youtube.com/@dr.dougleao">Youtube</a>
+    <a class="btn" href="https://mentoria-onovo.netlify.app/reuniao/">Mentoria individual</a>
+  </div>
+<br><br><br>
+</body>
+</html>
