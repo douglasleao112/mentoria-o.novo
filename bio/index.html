@@ -106,6 +106,34 @@
       100% { transform: scale(1); }
     }
 
+
+    .glow-text {
+  position: relative;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.glow-text::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.8), transparent);
+  animation: glowMove 2s infinite;
+}
+
+@keyframes glowMove {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+
   </style>
   <script>
     document.addEventListener('contextmenu', event => event.preventDefault());
@@ -120,10 +148,16 @@
     <img src="https://static.wixstatic.com/media/7f5efc_a334d1b8ae69448aa2477c25b4dd2b48~mv2.png" class="dollar2" alt="Notas">
   </div>
 
+
+  <div style="text-align: center; margin-top: -40px; margin-bottom: 10px;">
+  <span class="glow-text">Comece sua jornada de prosperidade</span>
+</div>
+
+
   <div class="buttons">
-    <a class="btn" href="https://mentoria-onovo.netlify.app/oferta/">Personal, aumente seu faturamento!</a>
-    <a class="btn" href="https://www.youtube.com/@dr.dougleao">Youtube</a>
-    <a class="btn" href="https://mentoria-onovo.netlify.app/reuniao/">Mentoria individual</a>
+    <a class="btn" href="https://mentoria-onovo.netlify.app/oferta/">Personal, fature 3x!</a>
+    <a class="btn" href="https://www.youtube.com/@dr.dougleao">Youtube confere lá</a>
+    <a class="btn" href="https://mentoria-onovo.netlify.app/reuniao/">Mentoria Individual</a>
   </div>
 <br><br><br>
 </body>
