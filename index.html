@@ -2,6 +2,25 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=https://mentoria-onovo.netlify.app/oferta/">
+  <title>Redirecionando...</title>
+  <script>
+    // Captura os parâmetros da URL atual
+    const params = new URLSearchParams(window.location.search);
+    const utms = [];
+
+    // Lista de parâmetros que você quer repassar
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'cupom'].forEach(key => {
+      if (params.has(key)) {
+        utms.push(`${key}=${encodeURIComponent(params.get(key))}`);
+      }
+    });
+
+    // Monta o link final com os parâmetros
+    const destino = 'https://mentoria-onovo.netlify.app/oferta/';
+    const redirectUrl = utms.length ? `${destino}?${utms.join('&')}` : destino;
+
+    // Faz o redirecionamento
+    window.location.href = redirectUrl;
+  </script>
 </head>
 </html>
